@@ -1,4 +1,4 @@
-Kubernetes set up on windows 10  
+Kubernetes cluster set up on windows 10  
 1 master and 2 nodes
  
 
@@ -17,12 +17,14 @@ Listing the issues that I have encountered and the action taken to resolve them.
 
 1. Installation of ansible did not go through.
 	- Manually installed python pip, ran vagrant destroy and vagrant up 
-	
+	apt-get install python3-pip
+
+
 2. Failed at Calico installation step
 	- Updated the yaml url to the latest one
+	Line 106: master-playbook.yml: command: kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
 	
 3. Failed at the docker installatiion step while node setup
 	- Removed the docker notify step from the node playbook
 	
 	
-With 	
